@@ -2,8 +2,9 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { createCard } from "./cardSlice";
-
-
+import { Button, OutlinedInput, Input } from '@mui/material';
+import { Link } from 'react-router-dom';
+import "../styles.scss";
 
 const CardCreator = props => {
     
@@ -24,21 +25,26 @@ const CardCreator = props => {
         dispatch(createCard(newCard));
     }
 
+
     return (
     <div>
-        <label htmlFor="createNewCard"> Create a New Card! </label>
-            <form onSubmit={addCardHandleSubmit}>
-            <label> Question: </label>
-            <input id='questionInput' type="text"></input>
-            <label> Answer: </label>
-            <input id='answerInput' type="text"></input>
-            <label> Hint (optional) </label>
-            <input id='hintInput' type="text"></input>
-            <label> Category: </label>
-            <input id='categoryInput' defaultValue={props.category} type="text"></input>
-            <button type="submit"> Add Card! </button>
-        </form>
+        <h3 htmlFor="createNewCard"> Create a New Card! </h3>
+            <Button id='homeButton' href="/" variant="contained">View Card Set On HomePage</Button>          
+                <form onSubmit={addCardHandleSubmit}>
+                <label> Question: </label> 
+                    <Input defaultValue='' className='input' id='questionInput' type="text"></Input>
+                   <label> Answer: </label>
+                    <Input className='input'  id='answerInput' type="text"></Input>
+                     <label> Hint (optional) </label> 
+                    <Input className='input'  id='hintInput' type="text"></Input>
+                    <label> Category: </label>
+                    <Input className='input'  id='categoryInput' defaultValue={props.category} type="text"></Input>
+            
+            <Button variant="contained" type="submit">Add Card!</Button>          
+            </form>
+        <h3 htmlFor="editCards"> Double-click to Edit your Cards! </h3>
     </div>
+  
     )
 }
 
