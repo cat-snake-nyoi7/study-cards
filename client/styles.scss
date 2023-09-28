@@ -81,3 +81,69 @@ body {
   //background-color: white;
   border-radius: 20px;
 }
+
+#homeButton {
+  display: flex;
+  justify-content: flex-end;
+  // background-color: rgb(43, 9, 235);
+  width: 20%;
+  font-size: large;
+  // height: 20%;
+  // padding: 5px;
+  // margin: 50px;
+  float: right;
+}
+
+.input {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+//* Styling for the card container */
+.cardBox {
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-gap: 10px; /* Adjust the gap between elements */
+}
+
+/* Styling for strong elements */
+.cardBox strong {
+  font-weight: bold;
+}
+
+/* Styling for the ElementMaker component */
+.cardBox .elementMaker {
+  border: 1px solid #ccc;
+  padding: 5px;
+  /* Add any other specific styles for the ElementMaker component here */
+}
+
+/* Styling for the Answer elements (make them closer to the Question) */
+.cardBox span.answer {
+  margin-left: 10px; /* Adjust the margin to your preference */
+}
+
+/* Styling for the delete button */
+.cardBox button {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Styling for the delete button on hover */
+.cardBox button:hover {
+  background-color: #cc0000;
+}
