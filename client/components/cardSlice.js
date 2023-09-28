@@ -14,6 +14,7 @@ const initialState = {
     showNext: false,
     currentQ: 1,
     showInputElement: false
+    
 }
 
 // thunks / aka async action creators
