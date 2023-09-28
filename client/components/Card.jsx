@@ -1,7 +1,10 @@
 import React from 'react';
+import DeleteIcon from '@mui/icons-material/Delete';
+import Button from '@mui/material/Button';
 import { useSelector, useDispatch } from "react-redux";
 import { editCard, deleteCard } from "./cardSlice";
 import { useState } from 'react';
+
 
 const Card = props => {
 
@@ -27,7 +30,7 @@ const Card = props => {
           {/* <button onClick={props.delete}>Delete Card</button> */}
       </div>
       <div>
-          <button id='id' onClick={deleteCardHandleSubmit}>Delete Card</button>
+          <Button id='id' variant="outlined" startIcon={<DeleteIcon />} onClick={deleteCardHandleSubmit}>Delete Card</Button>
           {/* <button onClick={props.delete}>Delete Card</button> */}
       </div>
     </div>

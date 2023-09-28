@@ -13,6 +13,7 @@
   "author": "S, T, J, C",
   "license": "ISC",
   "dependencies": {
+    "@mui/icons-material": "^5.14.11",
     "@reduxjs/toolkit": "^1.9.5",
     "concurrently": "^8.2.1",
     "cors": "^2.8.5",

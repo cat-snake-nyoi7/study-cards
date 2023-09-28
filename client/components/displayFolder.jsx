@@ -5,9 +5,9 @@ import React from 'react';
 const DisplayFolder = (props) => {
     return (
 
-        <Card variant='outlined' className='displayFolder'>
+        <Card variant='outlined' className='singleFolder'>
             <CardContent>
-                <Typography>{props.category}</Typography>
+                <Typography variant="h5" color="primary">{props.category}</Typography>
             </CardContent>
             <CardActions>
                 <Button variant="soft" color="success">
@@ -15,6 +15,7 @@ const DisplayFolder = (props) => {
                         Go To Quiz
                     </Link>
                 </Button>
+
                 <Button variant="soft" color="success">
                 <Link to={`/editor/${props.category}`}>
                     Go To Editor

@@ -48,40 +48,41 @@ const FlipCard = (props) => {
 
     return (
         <div>
-        <ReactCardFlip className='quizCard' isFlipped={flip} flipDirection="horizontal" 
-        infinite={true} flipSpeedBackToFront={1.5} flipSpeedFrontToBack={1.5}>
-            <div style={{
-                width: '300px',
-                height: '200px',
-                background: 'green',
-                fontSize: '40px',
-                margin: '20px',
-                textAlign: 'center',
-                padding: '20px'
-            }}>
-                {
-                !showHint ? <h2> {card.question} </h2> 
-                : <div>
-                    <h2> {card.question} </h2> 
-                    <h3> {card.hint} </h3> 
+        <div>
+            <ReactCardFlip isFlipped={flip} flipDirection="horizontal" 
+            infinite={true} flipSpeedBackToFront={1.5} flipSpeedFrontToBack={1.5}>
+                <div class='flipCard' style={{
+                    width: '55vw',
+                    height: '33vw',
+                    fontSize: '20px',
+                    margin: '20px',
+                    textAlign: 'center',
+                    color: 'white',
+                    padding: '20px'
+                }}>
+                    {
+                    !showHint ? <h2> {card.question} </h2> 
+                    : <div>
+                        <h2> {card.question} </h2> 
+                        <h3 style={{color:"yellow"}}> Hint: {card.hint} </h3> 
+                    </div>
+                    }
                 </div>
-                }
-            </div>
-            <div style={{
-                width: '300px',
-                height: '200px',
-                background: '#fbd7f8',
-                fontSize: '40px',
-                color: 'blue',
-                margin: '20px',
-                borderRadius: '4px',
-                textAlign: 'center',
-                padding: '20px'
-            }}>
-                {card.answer}
-                <br />
-            </div>
-        </ReactCardFlip>
+                <div class='flipCard' style={{
+                   width: '55vw',
+                   height: '33vw',
+                   fontSize: '20px',
+                   margin: '20px',
+                   textAlign: 'center',
+                   color: 'yellow',
+                   padding: '20px'
+                }}>
+                    <h2>{card.answer}</h2>
+                    <br />
+                </div>
+            </ReactCardFlip>
+        </div>
+        <br></br>
 
         {/* below card: input field, followed by buttons */}
         <input id='currentAnswer' placeholder="Your answer..." onChange={(e) => {currentAnswer = e.target.value; console.log(currentAnswer)}}></input> 
