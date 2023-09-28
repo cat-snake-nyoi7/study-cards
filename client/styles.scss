@@ -74,12 +74,36 @@ body {
 
 .flipCard {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 55vw; //75% of viewport width    -Tommy :)
   height: 33vw; 
-  background-image: url('./assets/indexCard.jpg');
+  background-image: url('./assets/study-cards_720.jpg');
+  background-size: cover;
   //background-color: white;
   border-radius: 20px;
+}
+
+.DisplayFolder {
+  display: grid;
+  grid-template-columns: repeat(2, 25vw);
+  column-gap: 3vw;
+}
+@media screen and (max-width: 800px){
+  .DisplayFolder {
+    grid-template-columns: repeat(1, 40vw);
+  }
+}
+
+.singleFolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: #22232e 2px 2px 0 0;
+  button {
+    border: 1px solid lightblue;
+  }
+  height: 18vw
 }
 
 #homeButton {

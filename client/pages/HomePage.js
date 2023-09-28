@@ -24,19 +24,30 @@ const HomePage = (props) => {
     const categoriesArray = categories.map((category, index) => {
         return (
             <div key={index}>
-                <DisplayFolder category={category} />
+                <DisplayFolder class='DisplayFolder' category={category} />
                 <br />
             </div>
         )
     });
 
+    const defaultEditorEndpoint = 'defaultCategory';
     return (
         <div>
-            <h1 style={{ textAlign: "center" }}></h1>
+            <div>
+                <h1 class='title'> Study Cards v2 </h1>
+                <Button variant="outlined" size="small">
+                    <Link to={`/editor/${defaultEditorEndpoint}`}>
+                        Create New Cards
+                    </Link>
+                </Button>
+                <br></br><br></br>
+            </div>
+            <div class='DisplayFolder'>
             {
                 !isCategoriesFetched ? <p>Loading!</p> :
                     categoriesArray
             }
+            </div>
         </div>
     );
 

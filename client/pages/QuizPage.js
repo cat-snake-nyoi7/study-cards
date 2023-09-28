@@ -47,7 +47,7 @@ const goToNext = () => {
         <div>
             <div class="quizHeader"> 
                 <p> Quiz on: <b> {category} </b> ----  
-                <i> Question #{(!currentQ > card_total) ? currentQ : card_total}/{card_total} </i> </p>
+                <i> Question #{(currentQ > card_total) ? card_total : currentQ}/{card_total} </i> </p>
                 <Button variant="soft" color="success">
                     <Link to={'/'}>
                         Back to Home

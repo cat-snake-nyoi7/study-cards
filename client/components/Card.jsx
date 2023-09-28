@@ -1,9 +1,11 @@
+import DeleteIcon from '@mui/icons-material/Delete';
 import React, { useRef } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { editCard, deleteCard, setShowInputElement } from "./cardSlice";
 import { useState, useEffect } from 'react';
 import ElementMaker from './ElementMaker';
 import Button from '@mui/material/Button';
+
 
 const Card = props => {
 
@@ -81,8 +83,12 @@ const Card = props => {
       <strong> Category: </strong>
         <ElementMaker className= 'elementMaker' value={props.category} handleChange={(e) => editCategoryHandleSubmit(e.target.value)} handleDoubleClick={() => dispatch(setShowInputElement(!showInputElement))} showInputEle={showInputElement}/>
       <div>
-        <Button variant="outlined" id='id' onClick={deleteCardHandleSubmit}>Delete Card</Button>  
-        {/* <button ></button> */}
+          {/* <button onClick={props.edit}>Edit Card</button> */}
+          {/* <button onClick={props.delete}>Delete Card</button> */}
+      </div>
+      <div>
+          <Button id='id' variant="outlined" startIcon={<DeleteIcon />} onClick={deleteCardHandleSubmit}>Delete Card</Button>
+          {/* <button onClick={props.delete}>Delete Card</button> */}
       </div>
     </div>
   )
