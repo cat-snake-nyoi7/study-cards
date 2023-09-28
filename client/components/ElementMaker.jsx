@@ -5,11 +5,11 @@ import React from "react";
 // Create an ElementMaker component
 function ElementMaker(props) {
   return (
-    <span>
+    <span className ='input'>
       {
         // Use JavaScript's ternary operator to specify <span>'s inner content
         props.showInputEle ? (
-          <input
+          <input className ='input'
             type="text"
             defaultValue={props.value}
             onChange={props.handleChange}
@@ -20,7 +20,7 @@ function ElementMaker(props) {
             autoFocus
           />
         ) : (
-          <span
+          <span 
             onDoubleClick={props.handleDoubleClick}
             style={{
               display: "inline-block",
