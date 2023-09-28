@@ -31,15 +31,15 @@ const CardCreator = props => {
         <h3 htmlFor="createNewCard"> Create a New Card! </h3>
             <Button id='homeButton' href="/" variant="contained">View Card Set On HomePage</Button>          
                 <form onSubmit={addCardHandleSubmit}>
-                <br/> <label> Question: </label> <br/>
+                <label> Question: </label> 
                     <Input defaultValue='' className='input' id='questionInput' type="text"></Input>
-                    <br/> <label> Answer: </label> <br/>
+                   <label> Answer: </label>
                     <Input className='input'  id='answerInput' type="text"></Input>
-                    <br/> <label> Hint (optional) </label> <br/>
+                     <label> Hint (optional) </label> 
                     <Input className='input'  id='hintInput' type="text"></Input>
-                    <br/> <label> Category: </label><br/>
+                    <label> Category: </label>
                     <Input className='input'  id='categoryInput' defaultValue={props.category} type="text"></Input>
-            <br></br>
+            
             <Button variant="contained" type="submit">Add Card!</Button>          
             </form>
         <h3 htmlFor="editCards"> Double-click to Edit your Cards! </h3>
